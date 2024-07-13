@@ -1,0 +1,220 @@
+body {
+    font-family: 'Lucida Console', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f5;
+    background-image: url('11.jpg');
+    color: rgb(113, 6, 128);
+    animation: fadeIn 2s;
+}
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('7.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(247, 247, 247);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.swipe-text-container {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.swipe-text {
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    animation: textTransform 9s infinite;
+    background-image: linear-gradient(to right, #06d8d8, #6c1ecc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for stroke effect */
+}
+.swipe-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.swipe-text:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.swipe-text:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes textTransform {
+    0%, 33% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    34%, 66% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    67%, 100% {
+        opacity: 1;
+        transform: translateY(-200%);
+    }
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: rgb(255, 250, 250);
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #070707;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(230, 138, 1);
+    color: #001101;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 30px; /* Elliptical shape */
+}
+
+.btn:hover {
+    background-color: #590281;
+    color: #020202;
+}
+
+header {
+    background-image: url('9.jpg');
+    background-color: #050505;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    background-image: url('4.jpg');
+    width: 150px;
+    background-color: #fcfcfc;
+    
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold;
+    color: rgb(231, 123, 0);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1{
+    font-size: 3em;
+    color: hsl(29, 84%, 54%);
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for stroke effect */
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #fdbb06, #ff9239);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+h2{
+    font-size: 2em;
+    text-decoration: underline;
+    color: #6400e7;
+    font-family: 'algerian', cursive;
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for stroke effect */
+    margin-bottom: 10px;
+}
+p{
+    font-size: 2em;
+    color: #000000;
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin-bottom: 10px;  
+    font-family: 'arial narrow', cursive;
+    background: linear-gradient(90deg, #009bd8, #0ff12e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ul{
+    font-size: 2em;
+    color: #3e00ce;
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin-bottom: 10px;  
+    font-family: 'arial narrow', cursive;
+    background: linear-gradient(90deg, #009bd8, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
